@@ -1,0 +1,77 @@
+.projects {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #3b82f6;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* FIX: 3 cards in one row */
+  gap: 8rem;
+  justify-items: center;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 350px;
+  background: linear-gradient(to bottom right, #1e3a8a, #3b82f6);
+  color: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.5);
+}
+
+.project-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #facc15;
+}
+
+.project-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #e0f2fe;
+}
+
+.project-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: #fcd34d;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.project-link:hover {
+  border-color: #fcd34d;
+}
+
+/* ✅ RESPONSIVENESS */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 card per row on mobile */
+  }
+}
